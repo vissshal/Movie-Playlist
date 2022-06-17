@@ -9,11 +9,6 @@ import {
   ADD_SEARCH_MOVIES,
 } from "../actions";
 
-export default combineReducers({
-  movies,
-  search,
-});
-
 const initialMovieState = {
   list: [],
   favourites: [],
@@ -72,6 +67,11 @@ export function search(state = initialSearchState, action) {
       return state;
   }
 }
+
+export default combineReducers({
+  movies,
+  search,
+});
 
 /*
     Since, REDUCER returns a new state so whatever it will do that will reside in the store and not the ACTION's state i.e  REDUCER's state is the final state
